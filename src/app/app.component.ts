@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todolist';
+  
+  item:any="hello";
+  displayTask(event){
+    console.log({event});
+  }
 }
