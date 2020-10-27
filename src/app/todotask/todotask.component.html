@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">TODO List</h1>
 <div style="text-align: center;">
-    <button class="button button1" (click)="addItem()">ADD TASK</button>
+    <button class="button button1" (click)="addTask()">ADD TASK</button>
 </div>
 <table class="customers">
     <tr>
@@ -11,6 +11,6 @@
     <tr *ngFor="let item of listTask">
       <td>{{item.id}}</td>
       <td>{{item.task}}</td>
-      <td><button class="button button3" (click)="deleteTask(item.id)">DELETE TASK</button></td>
+      <td><button class="button button3" (click)="deleteTask(item.id)">DELETE TASK</button><button class="button button1" (click)="updateTask(item.id)">UPDATE TASK</button></td>
     </tr>
   </table>

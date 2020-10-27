@@ -19,21 +19,25 @@ export class TodotaskComponent implements OnInit {
      console.log("value--task",this.task);
     
   }
-  addItem() {
-   
+  addTask() {
     this.taskValue.emit("value emitted")
     let todo = prompt("Enter Task");
     this.listTask.push({id:this.id++,task:todo})
     console.log(this.listTask)
   }
   deleteTask(deleteID){
-    console.log(this.listTask)
    if(this.listTask){
      let index = this.listTask.findIndex(v=>v.id===deleteID);
      if(index > -1){
        this.listTask.splice(index,1);
      }
-     console.log(this.listTask)
+   }
+ }
+ updateTask(updateID){
+   let updateTask = prompt("Update Task");
+   if(updateTask){
+    let updateIndex = this.listTask.findIndex(v=>v.id == updateID);
+    this.listTask[updateIndex].task = updateTask;
    }
  }
 }
