@@ -17,10 +17,10 @@ export class TodotaskComponent implements OnInit {
 
   ngOnInit(): void {
      console.log("value--task",this.task);
-     //this.taskValue.emit("value emitted")
+    
   }
   addItem() {
-   // this.items.push(newItem);
+   
     this.taskValue.emit("value emitted")
     let todo = prompt("Enter Task");
     this.listTask.push({id:this.id++,task:todo})
