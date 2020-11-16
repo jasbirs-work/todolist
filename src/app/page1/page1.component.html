@@ -1,0 +1,27 @@
+<p appBodycolor>page1 works!</p>
+<ul *ngIf="optionalRendering">
+    <li *ngFor="let i of [1,2,3,4]">{{i}}</li>
+</ul>
+<button (click)="pagechange()">page2</button>
+
+<!-- <ul *ngFor="let i of information" [ngSwitch]="i.country">
+    <li *ngSwitchCase = "'germany'">{{i.id}}</li>
+    <li *ngSwitchCase = "'sri lanka'">{{i.id}}</li>
+    <li *ngSwitchDefault>{{i.id}}</li>
+</ul> -->
+<ul *ngFor="let person of people"
+    [ngSwitch]="person.country"> 
+
+  <li *ngSwitchCase="'UK'" 
+      class="text-success">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'USA'"
+      class="text-primary">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'HK'"
+      class="text-danger">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchDefault 
+      class="text-warning">{{ person.name }} ({{ person.country }})
+  </li>
+</ul>

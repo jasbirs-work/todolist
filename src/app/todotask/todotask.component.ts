@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-todotask',
   templateUrl: './todotask.component.html',
   styleUrls: ['./todotask.component.scss']
 })
-export class TodotaskComponent implements OnInit {
+export class TodotaskComponent implements OnInit, OnChanges{
   
  // Here data transfer from child to parent is done and also the vice versa for reference purpose
   @Input() task: any;
@@ -40,4 +40,11 @@ export class TodotaskComponent implements OnInit {
     this.listTask[updateIndex].task = updateTask;
    }
  }
+ ngOnChanges(changes: SimpleChanges): void {
+   //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+   //Add '${implements OnChanges}' to the class.
+   console.log({changes})
+   
+ }
+
 }

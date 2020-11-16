@@ -1,20 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { TodotaskComponent } from './todotask/todotask.component';
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+import { Page1Component } from './page1/page1.component';
+import { Page2Component } from './page2/page2.component';
+import { BodycolorDirective } from './bodycolor.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodolistComponent,
-    TodotaskComponent
+    TodotaskComponent,
+    NopagefoundComponent,
+    Page1Component,
+    Page2Component,
+    BodycolorDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,11 @@
 <h1 style="text-align: center;">TODO List</h1>
 <div style="text-align: center;">
     <button class="button button1" (click)="addTask()">ADD TASK</button>
+    <span>{{task}}</span>
 </div>
+<button [routerLink]="[ '/page1' ]">Page 1</button>
+<button [routerLink]="['/page2']">Page 2</button>
+
 <table class="customers">
     <tr>
       <th>ID</th>
