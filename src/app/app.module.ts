@@ -9,6 +9,7 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { BodycolorDirective } from './bodycolor.directive';
+import { ContentsComponent } from './contents/contents.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BodycolorDirective } from './bodycolor.directive';
     Page1Component,
     Page2Component,
     BodycolorDirective,
+    ContentsComponent,
   ],
   imports: [
     BrowserModule,
