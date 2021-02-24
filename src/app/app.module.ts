@@ -23,7 +23,7 @@ import { ContentsComponent } from './contents/contents.component';
     ContentsComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule
   ],

@@ -10,6 +10,8 @@ export class TodotaskComponent implements OnInit, OnChanges{
  // Here data transfer from child to parent is done and also the vice versa for reference purpose
   @Input() task: any;
   @Output() taskValue = new EventEmitter;
+  public data:any;
+  public valueData ="hellofrom todo hello"
  // Here data transfer from child to parent is done and also the vice versa for reference purpose
   public listTask = [];
   public id = 0;
